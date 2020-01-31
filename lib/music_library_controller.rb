@@ -66,8 +66,8 @@ class MusicLibraryController
     input = gets.chomp 
     count = 1
     if Artist.find_by_name(input)
-      Artist.find_by_name(input).songs.each do |song|
-        puts "#{count} - #{song.name}"
+      Artist.find_by_name(input).songs.sort_by {|song| song.name}.each do |song|
+        puts "#{count}. #{song.name} - #{song.genre}"
         count += 1 
       end
     end
