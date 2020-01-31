@@ -91,8 +91,7 @@ class MusicLibraryController
     songs_list = Song.all.uniq.sort_by {|song| song.name}
     input = gets.chomp.to_i
     if input > 0 and input <= songs_list.size
-      song = songs_list[input + 1]
-      binding.pry
+      song = songs_list[input]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
