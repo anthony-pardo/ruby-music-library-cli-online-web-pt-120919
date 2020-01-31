@@ -92,7 +92,7 @@ class MusicLibraryController
     input = gets.chomp.to_i
     if input > 0 and input <= songs_list.size 
       song = songs_list[input + 2]
-      puts "Playing #{song.name} by #{song.artist.name}."
+      puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
 end
