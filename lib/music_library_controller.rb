@@ -86,6 +86,8 @@ class MusicLibraryController
   end
   
   def play_song
-    
+    list_songs 
+    puts "Please enter the number of a song:"
+    input = gets.chomp 
   end
 end
