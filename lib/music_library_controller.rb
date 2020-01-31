@@ -89,10 +89,9 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     #list_songs
     songs_list = Song.all.uniq.sort_by {|song| song.name}
-    input = gets.chomp.to_i
+    input = gets.strip.to_i
     if input > 0 and input <= songs_list.size
       song = songs_list[input + 1]
-      binding.pry
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
